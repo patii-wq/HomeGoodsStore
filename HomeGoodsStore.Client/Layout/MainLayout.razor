@@ -4,27 +4,83 @@
     <div class="sidebar">
         <div class="nav-menu">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                🏠 Главная
             </NavLink>
             <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                🔢 Счётчик
             </NavLink>
             <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                📊 Данные
             </NavLink>
             <NavLink class="nav-link" href="shop">
-                <span class="oi oi-cart" aria-hidden="true"></span> Магазин
+                🛍️ Магазин
             </NavLink>
         </div>
     </div>
 
     <div class="main">
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">📘 Документация</a>
         </div>
-
         <div class="content px-4">
             @Body
         </div>
     </div>
 </div>
+
+<style>
+    .page {
+        display: flex;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 250px;
+        background: linear-gradient(135deg, #2c3e50, #1a252f);
+        color: white;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 5px;
+    }
+
+    .nav-link {
+        padding: 12px 20px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        text-decoration: none;
+        color: #ecf0f1;
+    }
+
+        .nav-link:hover {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .nav-link.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+    .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-row {
+        background: white;
+        padding: 15px;
+        text-align: right;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .content {
+        padding: 20px;
+        background: #f5f5f5;
+        min-height: calc(100vh - 60px);
+    }
+</style>
